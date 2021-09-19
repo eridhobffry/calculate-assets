@@ -1,0 +1,1 @@
+export { postAssetsData } from './post_assets_data'

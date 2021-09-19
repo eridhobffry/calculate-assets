@@ -10,7 +10,7 @@ const BaseLayoutComponent = (props) => {
         <GlobalStyle />
         <Div100vh id={`layout-root-content-${nanoid()}`}>
             <Styled.BaseWrapper>
-                <img src='https://uploads-ssl.webflow.com/5f6c3b4dfd4c1d2c533c6f25/5f6c3b4dfd4c1d74a03c6f5a_Finvia_Logo_White_Subline.svg' alt='logo' width='20%' />
+                <Styled.ImageLogo id='logo' src='https://uploads-ssl.webflow.com/5f6c3b4dfd4c1d2c533c6f25/5f6c3b4dfd4c1d74a03c6f5a_Finvia_Logo_White_Subline.svg' alt='logo' />
                 <Styled.ChildrenContainerCard>
                     {children}
                 </Styled.ChildrenContainerCard>

@@ -1,5 +1,9 @@
-import TextInput from "./text_input"
+import Input from "./input"
+import { validationMethods } from "./validation_methods"
+import InputPercentage from "./input_percentage"
 
 export {
-    TextInput
+    Input,
+    validationMethods,
+    InputPercentage
 }

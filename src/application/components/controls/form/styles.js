@@ -14,7 +14,7 @@ export const FormElementWrapper = styled.div`
     }
 `
 
-export const TextInputWrapper = styled.div`
+export const InputWrapper = styled.div`
     width: 100%;
     margin: 0;
     padding: 0;

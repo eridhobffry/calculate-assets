@@ -1,9 +1,10 @@
-import React, { Fragment } from 'react'
+import React from 'react'
+import BaseLayout from '../../_layout'
 
 const FormAssetsComponent = () => {
-    return <Fragment>
+    return <BaseLayout>
         FormAssets
-    </Fragment>
+    </BaseLayout>
 }
 
 export default FormAssetsComponent

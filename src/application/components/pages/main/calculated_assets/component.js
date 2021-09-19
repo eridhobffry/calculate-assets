@@ -1,9 +1,10 @@
-import React, { Fragment } from 'react'
+import React from 'react'
+import BaseLayout from '../../_layout'
 
 const CalculatedAssetsComponent = () => {
-    return <Fragment>
+    return <BaseLayout>
         CalculatedAssets
-    </Fragment>
+    </BaseLayout>
 }
 
 export default CalculatedAssetsComponent

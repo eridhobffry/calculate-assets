@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import { RadiosReducer } from "./assets";
+import { AssetsReducer } from "./assets";
 
 const reducers = combineReducers({
-    radios: RadiosReducer,
+    assets: AssetsReducer,
 })
 
 const appReducer = (state, action) => {

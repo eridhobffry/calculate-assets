@@ -1,7 +1,7 @@
 import { ACTIONS } from "application/constants";
 import { DefaultStore } from "../default_store";
 
-export const RadiosReducer = (state = DefaultStore.assets, action) => {
+export const AssetsReducer = (state = DefaultStore.assets, action) => {
     switch (action.type) {
         case ACTIONS.ASSETS_POST_DATA_REQUEST:
             return {

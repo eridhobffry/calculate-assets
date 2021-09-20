@@ -14,3 +14,10 @@ export const InputNumberGroupWrapper = styled.div`
     justify-content: space-between;
     gap: 20px;
 `
+
+export const SliderGroupWrapper = styled.div`
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column nowrap;
+    gap: 20px;
+`

@@ -6,15 +6,18 @@ import { validationMethods } from 'application/components/controls/form'
 import { isMobile } from 'react-device-detect'
 
 const Forms = () => {
+    const range = [0, 100]
     const defaultValues = {
         withdrawls: '',
         deposit: '',
-        inflation: ''
+        inflation: '',
+        rangeStockMarket: range,
+        minStockMarket: range[0] === 0 ? 0 : parseInt(range[0]),
+        maxStockMarket: parseInt(range[1]),
     }
 
-    const { register, formState: { errors }, handleSubmit, getValues, control, watch } = useForm({ defaultValues })
+    const { register, formState: { errors }, handleSubmit, getValues, control, watch, setValue } = useForm({ defaultValues })
 
-    console.log('ER:: watch', watch())
     return <Fragment>
         <Styled.FormsContainer>
             <Styled.InputNumberGroupWrapper>
@@ -46,6 +49,53 @@ const Forms = () => {
                     cssWidth={isMobile ? '100%' : '30%'}
                 />
             </Styled.InputNumberGroupWrapper>
+            <Styled.SliderGroupWrapper>
+                <Form.MinMaxInputRange
+                    nameMinMax='rangeStockMarket'
+                    nameMin='minStockMarket'
+                    nameMax='maxStockMarket'
+                    register={register}
+                    control={control}
+                    validationMethods={validationMethods}
+                    errors={errors}
+                    values={{
+                        minMaxValue: getValues().rangeStockMarket,
+                        minValue: getValues().minStockMarket,
+                        maxValue: getValues().maxStockMarket,
+                    }}
+                    setValue={setValue}
+                />
+                <Form.MinMaxInputRange
+                    nameMinMax='rangeStockMarket'
+                    nameMin='minStockMarket'
+                    nameMax='maxStockMarket'
+                    register={register}
+                    control={control}
+                    validationMethods={validationMethods}
+                    errors={errors}
+                    values={{
+                        minMaxValue: getValues().rangeStockMarket,
+                        minValue: getValues().minStockMarket,
+                        maxValue: getValues().maxStockMarket,
+                    }}
+                    setValue={setValue}
+                />
+                <Form.MinMaxInputRange
+                    nameMinMax='rangeStockMarket'
+                    nameMin='minStockMarket'
+                    nameMax='maxStockMarket'
+                    register={register}
+                    control={control}
+                    validationMethods={validationMethods}
+                    errors={errors}
+                    values={{
+                        minMaxValue: getValues().rangeStockMarket,
+                        minValue: getValues().minStockMarket,
+                        maxValue: getValues().maxStockMarket,
+                    }}
+                    setValue={setValue}
+                />
+            </Styled.SliderGroupWrapper>
         </Styled.FormsContainer>
     </Fragment>
 }

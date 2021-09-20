@@ -7,6 +7,7 @@ export const FormElementWrapper = styled.div`
     font-size: ${props => props.theme.fontSize.standard};
     color: ${props => props.theme.color.anthracite};
     margin:  ${props => props.cssMargin ? props.cssMargin : '0'};
+    justify-content: ${p => p.justifyContent ? p.justifyContent : ''};
     
     & label {
         margin-bottom: 4px;

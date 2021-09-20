@@ -21,13 +21,14 @@ export const InputWrapper = styled.div`
 
     & input{
         color: ${props => props.theme.color.anthracite};
-        border: 1px solid ${props => props.cssValidationError ? props.theme.color.red : props.theme.color.gray15};
+        border: 1px solid ${props => props.cssValidationError ? props.theme.color.red : props.theme.color.color15};
         height: 38px;
         padding-left: 8px;
         padding-top: 0;
         padding-bottom: 0;
         width: 100%;
         box-sizing: border-box;
+        background: ${p => p.theme.color.color15};
 
         @media (max-width: ${props => props.theme.breakpoint.tablet}px) {
             height: 41px;

@@ -24,6 +24,7 @@ const InputPercentage = ({ label, name, validate = {}, error, hideValidationMess
                         decimalScale="2"
                         onValueChange={(v) => onChange(v.value)}
                         placeholder='0%'
+                        displayType={inputType}
                     />
                 )}
             />

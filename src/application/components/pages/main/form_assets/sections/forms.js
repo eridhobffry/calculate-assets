@@ -12,7 +12,9 @@ const Forms = () => {
         inflation: ''
     }
 
-    const { register, formState: { errors }, handleSubmit, getValues, control } = useForm({ defaultValues })
+    const { register, formState: { errors }, handleSubmit, getValues, control, watch } = useForm({ defaultValues })
+
+    console.log('ER:: watch', watch())
     return <Fragment>
         <Styled.FormsContainer>
             <Styled.InputNumberGroupWrapper>

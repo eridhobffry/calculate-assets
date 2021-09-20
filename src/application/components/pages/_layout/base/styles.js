@@ -12,6 +12,11 @@ export const BaseWrapper = styled.div`
     background: ${p => `linear-gradient(180deg, ${p.theme.color.primary} 50%, ${p.theme.color.white} 50%)`};
 `
 
+export const ContentWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
 export const ImageLogo = styled.img`
     width: ${isMobile ? '50%' : '20%'};
     margin: ${isMobile ? '10px auto 20px' : ''};

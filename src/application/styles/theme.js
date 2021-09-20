@@ -27,7 +27,8 @@ export const theme = {
         success: '#4bb543',
         primary: '#002c58',
         primaryLight: '#4d6d8e',
-        rollianSecondary: '#002c58'
+        rollianSecondary: '#ff9947',
+        rollianSecondaryDark: '#cc7a39',
     },
     breakpoint: {
         xSmall: 480,

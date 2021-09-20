@@ -1,6 +1,6 @@
 module.exports = ({
-    Withdrawals,
-    Deposits,
+    Withdrawls,
+    Deposit,
     Inflation,
     MinStockMarket,
     MaxStockMarket,
@@ -9,8 +9,8 @@ module.exports = ({
     MinRealEstate,
     MaxRealEstate,
 }) => {
-    console.log('ER:: Withdrawals', Withdrawals)
-    console.log('ER:: Deposits', Deposits)
+    console.log('ER:: Withdrawls', Withdrawls)
+    console.log('ER:: Deposit', Deposit)
     console.log('ER:: Inflation', Inflation)
     console.log('ER:: MinStockMarket', MinStockMarket)
     console.log('ER:: MaxStockMarket', MaxStockMarket)
@@ -20,10 +20,19 @@ module.exports = ({
     console.log('ER:: MaxRealEstate', MaxRealEstate)
     
     return {
-        response: {
-            stockMarket: Math.floor(Math.random() * 100),
-            privateEquity: Math.floor(Math.random() * 100),
-            realEstate: Math.floor(Math.random() * 100),
-        }
+        response: [
+            {
+                label: 'Stock Market',
+                data: Math.floor(Math.random() * 100),
+            },
+            {
+                label: 'Private Equity',
+                data: Math.floor(Math.random() * 100),
+            },
+            {
+                label: 'Real Estate',
+                data: Math.floor(Math.random() * 100),
+            },
+        ]
     }
 }

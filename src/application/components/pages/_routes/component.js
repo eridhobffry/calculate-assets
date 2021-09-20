@@ -6,7 +6,7 @@ import { Main } from 'application/components/pages'
 const RoutesComponent = () => {
     return <Switch>
         <Route exact path={ROUTES.BASE} component={Main.FormAssets} />
-        <Route exact path={ROUTES.BASE} component={Main.CalculatedAssets} />
+        <Route exact path={ROUTES.YOUR_CALCULATED_ASSETS} component={Main.CalculatedAssets} />
     </Switch>
 }
 

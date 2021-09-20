@@ -8,6 +8,14 @@ export const AssetsReducer = (state = DefaultStore.assets, action) => {
                 ...state,
                 request: true
             }
+        case ACTIONS.ASSETS_REFRESH:
+            return {
+                ...state,
+                request: false,
+                succeed: false,
+                failed: false,
+                responseFormPayload: null,
+            }
         case ACTIONS.ASSETS_STORE_PAYLOAD_REQUEST:
             return {
                 ...state,

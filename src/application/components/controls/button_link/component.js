@@ -1,8 +1,9 @@
 import React from 'react'
 import * as Styled from './styles'
 
-const ButtonComponent = ({secondary = false, stretched = false, onButtonClick, buttonText, disabled = false}) => {
+const ButtonLinkComponent = ({secondary = false, stretched = false, onButtonClick, buttonText, disabled = false, linkTo = '' }) => {
     return <Styled.Button
+        to={linkTo}
         secondary={secondary}
         onClick={onButtonClick}
         stretched={stretched}
@@ -12,4 +13,4 @@ const ButtonComponent = ({secondary = false, stretched = false, onButtonClick, b
     </Styled.Button>
 }
 
-export default ButtonComponent
+export default ButtonLinkComponent

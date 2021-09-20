@@ -1,7 +1,13 @@
 import { ACTIONS } from "application/constants"
 
-export const postAssetsDetailsRequest = () => ({
-    type: ACTIONS.ASSETS_POST_DATA_REQUEST
+export const postAssetsDetailsRequest = (payload) => ({
+    type: ACTIONS.ASSETS_POST_DATA_REQUEST,
+    payload
+})
+
+export const refreshAssetsDetailsRequest = () => ({
+    type: ACTIONS.ASSETS_REFRESH,
+    
 })
 
 export const storeAssetsDetailsRequest = (payload) => ({

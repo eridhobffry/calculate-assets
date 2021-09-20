@@ -5,6 +5,7 @@ import SliderRange from '../slider_range'
 import { isMobile } from 'react-device-detect'
 
 const MinMaxInputRange = ({
+    label = '',
     nameMin,
     nameMax,
     nameMinMax,
@@ -42,36 +43,49 @@ const MinMaxInputRange = ({
         handleMaxChange(value[1])
     }
     return <Fragment>
+        <Styled.Label>
+            {label}
+        </Styled.Label>
         {
             isMobile ? <Styled.MinMaxInputRangeWrapper>
                 <SliderRange
+                    defaultValue={minMax}
                     name={nameMinMax}
                     register={register}
                     control={control}
                     cssWidth={'100%'}
+                    setValue={setValue}
                     validate={{ notEmpty: validationMethods.notEmpty }}
                     error={errors.nameMinMax}
+                    onRangeChange={value => handleChangeMinMax(value)}
+                    listenToDefaultValueChange
                 />
                 <Styled.MinMaxWrapper>
                     <InputPercentage
                         label={'Min'}
                         name={nameMin}
+                        defaultValue={min}
                         register={register}
                         control={control}
                         validate={{ notEmpty: validationMethods.notEmpty }}
                         error={errors.nameMin}
-                        cssWidth={'50%'}
+                        cssWidth={'30%'}
                         onPercentageChange={value => handleMinChange(value)}
+                        setValue={setValue}
+                        listenToDefaultValueChange
                     />
                     <InputPercentage
                         label={'Max'}
                         name={nameMax}
+                        defaultValue={max}
                         register={register}
                         control={control}
                         validate={{ notEmpty: validationMethods.notEmpty }}
                         error={errors.nameMax}
-                        cssWidth={'50%'}
+                        cssWidth={'30%'}
                         onPercentageChange={value => handleMaxChange(value)}
+                        setValue={setValue}
+                        listenToDefaultValueChange
                     />
                 </Styled.MinMaxWrapper>
             </Styled.MinMaxInputRangeWrapper> : <Styled.MinMaxInputRangeWrapper>

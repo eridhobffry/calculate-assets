@@ -112,7 +112,7 @@ const Forms = (props) => {
                 <Spacer px='25' />
                 <Styled.ButtonWrapper>
                     <Button onButtonClick={clearAssets} buttonText={'Clear'} />
-                    <Button secondary onButtonClick={onSubmitSuccess} buttonText={'Calculate'} />
+                    <Button secondary onButtonClick={handleSubmit(onSubmitSuccess)} buttonText={'Calculate'} />
                 </Styled.ButtonWrapper>
             </Form.FormWrapper>
         </Styled.FormsContainer>
